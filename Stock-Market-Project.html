@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Stock-Market-Project</title>
+    <link rel="icon" type="image/jpeg" sizes="32x31" href="assets/img/tech/favicon.jpg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
+    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="mainNav" data-bs-target="#navbarNav">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Kuda Vhito</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav" data-bs-target="#navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Projects</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="Stock-Market-Project.html">Stock Market Project</a><a class="dropdown-item" href="BI-Dashdoard-Project-1.html">BI Dashboard</a><a class="dropdown-item" href="surveyrmonkey-data.html">Careers Survey&nbsp;</a></div>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h3><br><strong><span style="color: rgb(15, 15, 15);">Predict The Stock Market With Machine Learning And Python</span></strong></h3>
+                </div>
+                <div class="image" style="background: url(&quot;assets/img/nature/360_F_290160357_UFyVKQZehZuZsdRjlJjpTWXc0CXmOyWj.jpg&quot;) center / cover no-repeat;overflow: clip;"></div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                        <h3><strong><span style="color: rgb(36, 41, 47);">Project Overview</span></strong></h3>
+                        <p style="text-align: left;"><span style="color: rgb(15, 15, 15);">Predicting stock market trends is a complex and challenging task, but with the help of machine learning and Python, it is possible to build models that can forecast future stock prices with reasonable accuracy. Machine learning algorithms use historical stock data to learn patterns and trends that can be used to make predictions about future stock prices.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+                        <p><span style="color: rgb(15, 15, 15);">To predict the stock market with machine learning and&nbsp;Python, we will need to first collect historical stock data and pre-process it&nbsp;to create features that can be used for model training. Then we can choose a&nbsp;machine learning algorithm, such as regression, decision trees, or neural&nbsp;networks, and train it on the historical data to learn patterns and trends.</span></p>
+                        <p><span style="color: rgb(15, 15, 15);">Steps:</span></p>
+                        <ul>
+                            <li><span style="color: rgb(15, 15, 15);">Downloaded historical price data for the S&amp;P 500</span></li>
+                            <li>Cleaned and visualized the data to get a better understanding of trends and patterns</li>
+                            <li>Defined our target variable for machine learning, which in this case is whether the stock price will increase or decrease in the near future</li>
+                            <li>Trained an initial machine learning model using our target variable and some basic predictors.</li>
+                            <li>Built a back-testing system to evaluate the performance of our model on historical data.</li>
+                            <li>Added additional predictors to our model to improve its performance, including rolling averages and trend indicators</li>
+                            <li>Continued to refine our model and improve its accuracy, potentially adjusting hyperparameters or feature selection to achieve better results.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                        <h3><strong>Process</strong></h3>
+                        <h6><strong>1: Downloading S&amp;P 500 price data &amp; Importing Pandas</strong></h6>
+                        <p>Will be using the pandas and yfinance libraries in Python to download and manipulate historical market data for a selection of stocks.<br><br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/inmport-pic.png"></picture><br>Ticker class will enable us to download the price history of the S&amp;P 500 with the period parameter set to max.&nbsp;<br><br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/inmport-pic2.png"></picture><br><br>This will output the entire historical price data for the S&amp;P 500 index, including the date, opening price, closing price, volume, and other relevant information.<br><br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/inmport-pic3.png"></picture><br><br>Below is the code that generates a line plot of the closing prices for the S&amp;P 500 index, with the date on the x-axis and the price on the y-axis.<br><br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/inmport-pic4.png"></picture>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <section class="portfolio-block project">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong>2: Cleaning and visualizing our stock market data</strong></h6>
+                                        <p>Delete extra columns that we do not need. The deleted columns are more appropriate for individual stocks not an index. The code below adds a new column to the sp500 data frame called "Tomorrow", which contains the closing prices of the S&amp;P 500 index for the following day.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/cleant-pic1.png"></picture><br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/cleant-pic2.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong>3: Setting up our target for machine learning </strong></h6>
+                                        <p>In machine learning, we often need to define a target variable, which is the variable we are trying to predict or find based on other variables in the dataset.In the context of stock market data, we can use the Tomorrow column we created earlier as the target variable. This column contains the closing prices of the S&amp;P 500 index for the following day, so our goal will be to predict the value of this column based on other variables in the dataset.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/setup1.png"></picture><br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/setup2.png"></picture><br><br>Target column values:<strong> [1] </strong>Price went up,<strong> [0]</strong> Price went down.&nbsp;<br><br><strong>Problem:</strong> When working with stock market data, it is important to consider the historical context of the data and how it may affect our predictions or analysis. If we go back too far in time, the market may have shifted significantly due to economic, political, or other factors, which can make our predictions less accurate.&nbsp;<br><strong>Solution:</strong> One way to mitigate this issue is to limit the time range of the data we use for our analysis. In this case, you have decided to only use data from 1990 onwards. This can help to ensure that the data is more relevant to the current market conditions, and can improve the accuracy of our predictions or analysis.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/setup3.png"></picture><br>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong>4: Training machine learning model </strong></h6>
+                                        <p>One of the advantages of using the RandomForestClassifier algorithm for stock market prediction is its ability to capture non-linear relationships between the features in the data. This is particularly important in stock market prediction, where many of the relationships between the various economic and market factors are non-linear. Traditional linear models may not be able to capture these non-linear relationships, which can limit their accuracy and effectiveness. The RandomForestClassifier, on the other hand, can model these complex relationships and make more accurate predictions based on them.<br>By using RandomForestClassifier for stock market prediction, we can take advantage of its ability to capture non-linear relationships and develop more accurate and robust models for predicting the stock market.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/training1.png"></picture><br><br>The precision score measures how many times when we said the price is going up and the price actually went up. The precision score is a measure of the accuracy of a machine learning model in predicting whether the price of a stock will go up or not. Specifically, it measures the proportion of times that the model correctly predicts that the price will go up out of all the times it predicted that the price will go up.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/training2.png"></picture><br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/training3.png"></picture><br><br>The orange line in our prediction graph represents the predicted values of the stock market prices, while the blue line represents the actual prices. If there is a large difference between the predicted and actual values, it could lead to low accuracy results. This may explain why we had low results in our earlier analysis.<br><br>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong><span style="color: rgb(15, 15, 15);">5: Building a back-testing system</span></strong></h6>
+                                        <p>Back testing is a more robust way to test our algorithm over multiple years, as it simulates how the model would have performed in the past and provides a more reliable indication of its potential future performance. To achieve this, we use the predict and back-test functions to generate predictions and evaluate the performance of the machine learning model on the historical stock market data. This allows us to refine our model and improve its accuracy, giving us greater confidence in its ability to make accurate predictions in the future.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/backtest1.png"></picture><br><br>The machine learning model produced 3404 forecasts indicating a decline in the stock price and 2458 forecasts suggesting an increase in the stock price. We can now evaluate the precision score.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/backtest2.png"></picture><br><br>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong><span style="color: rgb(15, 15, 15);">6: Adding additional predictors to our model</span></strong></h6>
+                                        <p>The horizons are used to calculate the rolling sum of the Target variable over a specified window size. This rolling sum is stored in the Trend column for each horizon value. By computing the rolling sum, the model can determine if the stock price has been consistently moving in one direction over the past few days. If the trend value is high, it suggests that the price has been moving in a particular direction for a long time and may be due for a reversal. This can be a useful predictor for detecting changes in the direction of the stock price.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/adds1.png"></picture><br><br>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong>7: Improving the model</strong></h6>
+                                        <p>To minimize the number of trades and increase the probability of success, we set a threshold of 0.6 for the predicted probability of an increase in stock price. This means that we only make a trade if the model predicts an increase in stock price with a probability of 0.6 or higher. This approach reduces the number of trades we make, which is beneficial since trading every day can be risky and lead to losses. <br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/nature/inprov2.png" width="602" height="207"></picture><br>The precision score of 0.569 suggests that when the model predicts an increase in stock price with a probability above 0.6, it is correct around 57% of the time. Although this precision score is not high, it is better than our base model.&nbsp;<br>However, there is still room for improvement in the model's precision score, and further adjustments to the model's hyperparameters or feature selection may be necessary. Nevertheless, the model may still provide some useful signals for when to make trades, as the precision score indicates that it is correct more often than it is wrong when predicting a price increase.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5">
+            <p class="text-start">Email: kuda.vhito@gmail.com</p>
+            <p class="text-muted mb-0">Copyright © 2023 Kudakwashe Vhito</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Survey-On-Careers-Data</title>
+    <link rel="icon" type="image/jpeg" sizes="32x31" href="assets/img/tech/favicon.jpg">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Multi-Column-icons.css">
+    <link rel="stylesheet" href="assets/css/pikaday.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient" id="mainNav" data-bs-target="#navbarNav">
+        <div class="container"><a class="navbar-brand logo" href="index.html">Kuda Vhito</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav" data-bs-target="#navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Projects</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="Stock-Market-Project.html">Stock Market Project</a><a class="dropdown-item" href="BI-Dashdoard-Project-1.html">BI Dashboard</a><a class="dropdown-item" href="surveyrmonkey-data.html">Careers Survey&nbsp;</a></div>
+                    </li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h3>SurveyMonkey -Data Transformation</h3>
+                </div>
+                <div class="image" style="background: url(&quot;assets/img/nature/1590591813865%20(1).png&quot;) center / cover no-repeat;"></div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                        <h3><strong><span style="color: rgb(36, 41, 47);">Project Overview</span></strong></h3>
+                        <p style="text-align: left;">This project involved cleaning and analyzing a survey dataset using Python's Pandas library. The skills demonstrated include importing data from Excel into Pandas, renaming columns, unpivoting columns (also known as melting), joining columns, aggregating columns, and dropping columns. The dataset used was SurveyMonkey, consisting of over 30 questions with varying numbers of answer choices for each question. The dataset was in a wide format in an Excel spreadsheet, which made it difficult to analyze the data effectively in Tableau. Thus, the dataset was transformed into a long format.<br><br>Prior to the data transformation process, the dataset was cleaned by removing any irrelevant or duplicate information, such as rows with missing values or duplicated responses. Additionally, inconsistencies or errors in the data were checked and corrected. Finally, the dataset was analyzed to answer specific research questions, such as "How many people answered a question per given question" and "How many people answered the same answer per question."&nbsp;<span style="color: rgb(15, 15, 15);">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                        <h3><strong>Process</strong></h3>
+                        <h6><strong>1:&nbsp;Initial Excel&nbsp;</strong></h6>
+                        <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture1.jpg"></picture>
+                        <p><br>In order to analyze the survey data, I performed several data preparation steps. First, I merged the first two rows to create a single header row that contained the responses for each individual in separate columns. To ensure that the dataset was complete, I also used IF statements, transpose and concatenate functions to fill in any blank cells.<br><br>As a result of this data transformation process, I was able to create a new "Question + Sub-question" column that contained the complete question text for each survey response. This column served as the single header for the dataset, providing a clear and concise overview of the survey responses for each individual.<br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture2.jpg"></picture><br>After Excel cleaning<br>
+                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture3.jpg"></picture>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <section class="portfolio-block project">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <p>Next, I proceeded to perform further data cleaning and analysis using Python. After importing the necessary libraries, I utilized the pwd (present working directory) function to facilitate the file-moving process and streamline the data cleaning process.<br>By using pwd, I was able to easily navigate through my file system and locate the files I needed for my analysis. This not only saved time, but also ensured that the correct files were being used for analysis.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture4.png"></picture><br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture5.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <p>To ensure that I could easily correct any mistakes, I made a copy of the dataset using the code "dataset_modified = dataset.copy()". This approach allows me to revert back to the original dataset if I make a mistake during the cleaning or analysis process.<br>This is particularly useful when working with large datasets, as importing the data repeatedly can be a time-consuming process. By creating a copy of the original dataset, I am able to make changes and perform analysis without worrying about accidentally overwriting the original dataset. Next, I proceeded to delete any empty columns in the dataset.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture6.png"></picture><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture7.png"></picture><br>The next step in preparing the dataset for analysis was to unpivot the data using the melt method. This approach involved converting the wide format of the dataset into a long format, where each row represents a unique observation and each column represents a variable.<br><br>
+                                            <picture style="overflow: clip;display: block;"><img src="assets/img/avatars/Picture8.png"></picture>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture9.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <p>I then imported the "questions" sheet and dropped any columns that were not going to be used in the analysis. Since this sheet was only used as a reference to create the header row for the dataset, there were some columns that were not necessary for the analysis. To remove these unnecessary columns, I used the drop method and specified the columns to be removed. Additionally, I used the ‘inplace=True’ parameter to ensure that the changes were made to the dataset.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture10.png"></picture>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture11.png"></picture><br>At this stage, I had two datasets - the questions dataset and the melted survey dataset. To correlate the question and response data based on the question, I performed a join to merge these two datasets together. By using the question column as a common key, I was able to match the survey responses to their corresponding questions, as one question could have multiple responses. This enabled me to link the responses to their specific questions.&nbsp;<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture12.png"></picture><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture13.png"></picture><br>Next, I performed aggregation to answer the question "How many people answered each question," as not every individual responded to every question. We used the ‘groupby’ function and as we can see from the result, a count of 198 means that everyone answered that particular question.&nbsp;<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture14.png"></picture><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture15.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <p>Next, I performed the second merge by joining the two datasets "dataset_merged" and "respondents" on the question column. This allowed me to visualize the number of respondents for each question.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture16.png"></picture><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture17.png"></picture><br>The next question I needed to answer was "How many people provided the same answer for each question?" To do this, I used the ‘groupby’ function again and applied the count method to the response column. The results indicate that there were 688 distinct answers that could have been given. After obtaining the dataset of the number of people who gave the same answer per question, I proceeded to merge it with the 'dataset_merged_two' using the join function in Python.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture18.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <p>After finishing the data cleaning and analysis, the final step was to assign more readable and understandable names to the column headers. Once the renaming was completed, I downloaded the final edited Excel file to be used for further analysis and visualization in Tableau.<br><br>
+                                            <picture style="display: block;overflow: clip;"><img src="assets/img/avatars/Picture19.png" style="display: block;overflow: clip;"></picture><br>
+                                            <picture style="overflow: clip;display: block;"><img src="assets/img/avatars/Picture20.png"></picture>
+                                        </p>
+                                    </div>
+                                    <div class="col-12 col-md-12 col-lg-12 offset-md-0 offset-lg-0 info">
+                                        <h6><strong>Final Edited Excel&nbsp;</strong></h6>
+                                        <p><br>
+                                            <picture style="overflow: clip;display: block;"><img src="assets/img/avatars/final_output.jpg"></picture><br>The final edited excel file was downloaded, which can now be easily imported into Tableau for further visualization and analysis. By transforming the dataset into a long-format, it is now easier to understand the survey results and draw meaningful insights from the data. Overall, this project demonstrated the importance of proper data preparation and manipulation in order to effectively analyze and visualize data.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5">
+            <p class="text-start">Email: kuda.vhito@gmail.com</p>
+            <p class="text-muted mb-0">Copyright © 2023 Kudakwashe Vhito</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
